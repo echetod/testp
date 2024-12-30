@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .video-container {
@@ -92,22 +93,23 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(135deg, #ff7eb3 0%, #ff758c 50%, #fd5d93 100%);
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0 6px 15px rgba(255, 94, 155, 0.4);
+    box-shadow: 0 6px 15px rgba(106, 17, 203, 0.4);
     transition: all 0.3s ease-in-out;
     z-index: 1000;
 }
 
 .visible-retry:hover {
     transform: translate(-50%, -50%) scale(1.1);
-    background: linear-gradient(135deg, #fd5d93 0%, #ff758c 50%, #ff7eb3 100%);
-    box-shadow: 0 8px 20px rgba(255, 94, 155, 0.6);
+    background: linear-gradient(135deg, #5b0db9 0%, #1f63db 100%);
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.6);
 }
 
 .visible-retry:active {
     transform: translate(-50%, -50%) scale(0.95);
-    box-shadow: 0 4px 10px rgba(255, 94, 155, 0.8);
+    box-shadow: 0 4px 10px rgba(106, 17, 203, 0.8);
 }
+
