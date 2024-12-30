@@ -1,0 +1,113 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.video-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.portrait-video {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay styles */
+.hidden-overlay {
+    display: none;
+}
+
+.visible-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Options container styles */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.option-image {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid #ddd;
+}
+
+.option-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: #aaa;
+}
+
+/* Retry button styles */
+.hidden-retry {
+    display: none;
+}
+
+.visible-retry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7eb3 0%, #ff758c 50%, #fd5d93 100%);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 94, 155, 0.4);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.visible-retry:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: linear-gradient(135deg, #fd5d93 0%, #ff758c 50%, #ff7eb3 100%);
+    box-shadow: 0 8px 20px rgba(255, 94, 155, 0.6);
+}
+
+.visible-retry:active {
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow: 0 4px 10px rgba(255, 94, 155, 0.8);
+}
